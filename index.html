@@ -3,9 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Ejemplo</title>
+    <title>Facebook - Inicia sesión o regístrate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 0;
+            gap: 60px;
+            max-width: 1000px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        /* Columna izquierda (Logo y texto) */
+        .left-col {
+            max-width: 500px;
+            padding-bottom: 50px;
+        }
+
+        .logo {
+            color: #1877f2;
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-left: -3px;
+        }
+
+        .left-col p {
+            font-size: 24px;
+            line-height: 28px;
+            color: #1c1e21;
+            margin-top: -10px;
+        }
+
+        /* Columna derecha (Formulario) */
+        .right-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 396px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 17px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #1877f2;
+            box-shadow: 0 0 0 2px #e7f1fe;
+        }
+
+        .btn-login {
+            background-color: #1877f2;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-login:hover {
+            background-color: #166fe5;
+        }
+
+        .forgot-pass {
+            color: #1877f2;
+            font-size: 14px;
+            text-decoration: none;
+            margin: 10px 0;
+            display: inline-block;
+        }
+
+        .forgot-pass:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-bottom: 1px solid #dadde1;
+            margin: 15px 0;
+        }
+
+        .btn-new-account {
+            background-color: #42b72a;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px auto;
+        }
+
+        .btn-new-account:hover {
+            background-color: #36a420;
+        }
+
+        .bottom-text {
+            margin-top: 28px;
+            font-size: 14px;
+            color: #1c1e21;
+        }
+
+        .bottom-text a {
+            font-weight: bold;
+            color: #1c1e21;
+            text-decoration: none;
+        }
+
+        .bottom-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* Adaptación para pantallas pequeñas */
+        @media (max-width: 900px) {
+            .main-container {
+                flex-direction: column;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .left-col {
+                padding-bottom: 0;
+            }
+
+            .left-col p {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>pagina de ejemplo</h1>
+
+    <div class="main-container">
+        <!-- Sección izquierda -->
+        <div class="left-col">
+            <h1 class="logo">facebook</h1>
+            <p>Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida.</p>
+        </div>
+
+        <!-- Sección derecha -->
+        <div class="right-col">
+            <div class="card">
+                <form action="#">
+                    <input type="text" placeholder="Correo electrónico o número de teléfono" required>
+                    <input type="password" placeholder="Contraseña" required>
+                    <button type="submit" class="btn-login">Iniciar sesión</button>
+                    <a href="#" class="forgot-pass">¿Has olvidado la contraseña?</a>
+                    <hr>
+                    <a href="#" class="btn-new-account">Crear cuenta nueva</a>
+                </form>
+            </div>
+            <p class="bottom-text"><a href="#">Crea una página</a> para un famoso, una marca o una empresa.</p>
+        </div>
+    </div>
+
 </body>
 </html>
